@@ -13,6 +13,7 @@ const { v4: uuidv4 } = require('uuid');
 module.exports = {
     async index(req,res) {
         try {  
+            return res.status(200).json({"message":"chegou"});
         const instituts = await repository.getAll(Institut,{ include: [
             { association: 'phone' },
             { association: 'address' },
